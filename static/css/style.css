@@ -309,6 +309,67 @@ a { color: inherit; text-decoration: none; }
 .bar-bills { background: #8f6bd6; }
 
 /* ------------------------------------------------------------------ */
+/* Video Modal                                                         */
+/* ------------------------------------------------------------------ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    padding-top: 50px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--paper);
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    color: var(--ink-faint);
+}
+
+.modal-video {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: #000;
+}
+
+.modal-video iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+/* ------------------------------------------------------------------ */
 /* Buttons                                                             */
 /* ------------------------------------------------------------------ */
 
